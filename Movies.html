@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="Assets/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="Assets/css/style.css">
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
     crossorigin="anonymous"></script>
 </head>
@@ -47,12 +48,12 @@
   </header>
   <br>
   <div class="container">
-    <div class="card">
+    <div class="card" id="search-card">
       <div class="card-body">
         <p class="text-center">
           Welcome to your movie search portal! You can choose </p>
-        <p class="text-center">a genre from the list below and input a year! </p> 
-        <p class="text-center">This search will give you the top 10 results based on user ranking. Have fun! 
+        <p class="text-center">a genre from the list below and input a year! </p>
+        <p class="text-center">This search will give you the top 10 results based on user ranking. Have fun!
         </p>
         <form>
           <br>
@@ -77,8 +78,7 @@
             <option value="10752">War</option>
           </select>
           <br>
-          <br>
-          Release Year:
+          <br> Release Year:
           <br>
           <input type="text" name="lastname" id="release-year">
           <br>
@@ -90,10 +90,20 @@
       </div>
     </div>
   </div>
+
+  <br>
+  <div class="container">
+    <div id="results">
+      <div class="card" id="results-card">
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
-    <script src="Assets/JS/app.js"></script>
+  <script src="Assets/JS/app.js"></script>
 </body>
 
 </html>
