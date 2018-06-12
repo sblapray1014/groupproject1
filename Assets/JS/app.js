@@ -24,7 +24,7 @@ var d = new Date();
 var timeStamp = d.getTime();
 console.log(timeStamp);
  
-var gameURL ="https://api-endpoint.igdb.com//release_dates/?fields=*&filter[platform][eq]=48&order=date:asc&filter[date][gt]=1528771788961&expand=game"
+var gameURL ="https://cors-anywhere.herokuapp.com/https://api-endpoint.igdb.com//release_dates/?fields=*&filter[platform][eq]=48&order=date:asc&filter[date][gt]=1528771788961&expand=game"
 
 $.ajax({ 
  url: gameURL, 
