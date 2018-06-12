@@ -1,3 +1,28 @@
+body {
+    margin: 0;
+    background-image: url("../../Assets/images/background.jpg");
+   }
+
 .text-center {
-line-height: 10px;
+line-height: 12px;
 }
+
+.card {
+padding: 20px;
+padding-top: 10px;
+}
+
+.movie {
+margin-bottom: 50px;
+border-bottom: 1px solid grey;
+padding: 0 50px 50px;
+}
+.image-poster {
+float: left;
+margin-right: 20px;
+}
+
+.overview {
+margin-left: 20px;
+}
+
