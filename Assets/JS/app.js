@@ -48,3 +48,24 @@ $("#results-card").hide();
     $("select").val("0");
     });
 });
+
+var d = new Date();
+var timeStamp = d.getTime();
+console.log(timeStamp);
+ 
+var gameURL ="https://cors-anywhere.herokuapp.com/https://api-endpoint.igdb.com//release_dates/?fields=*&filter[platform][eq]=48&order=date:asc&filter[date][gt]=1528771788961&expand=game"
+
+$.ajax({ 
+ url: gameURL, 
+ method: "GET",
+ headers: {
+ "user-key":"e67ff0c6f63dbc0333511e5f9d22b691", 
+ "Access-Control-Allow-Origin":"*",
+ "Access-Control-Allow-Origin": "<origin>",
+ "accept":"application/json",
+ }
+});
+
+
+
+
