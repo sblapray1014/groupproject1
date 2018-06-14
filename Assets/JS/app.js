@@ -69,7 +69,7 @@ $.ajax({
  url: gameURL, 
  method: "GET",
  headers: {
- "user-key":"e67ff0c6f63dbc0333511e5f9d22b691", 
+ "user-key":"0ca0f25235d5e6e6661ebc4fa43793f3", 
  "Access-Control-Allow-Origin":"*",
  "Access-Control-Allow-Origin": "<origin>",
  "accept":"application/json",
