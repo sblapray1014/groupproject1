@@ -17,6 +17,31 @@ margin-bottom: 50px;
 border-bottom: 1px solid grey;
 padding: 0 50px 50px;
 }
+
+.rating-section {
+position: relative;
+right: -330px;
+top: -130px;
+width: 50px;
+}
+
+.paragraph-height {
+height: 250px;
+overflow: scroll;
+}
+
+.user-rating {
+position: absolute;
+right: 15px;
+top: 173px;
+font-weight: bold;
+}
+
+.rating-image {
+height: 50px;
+width: 50px;
+}
+
 .image-poster {
 float: left;
 margin-right: 20px;
