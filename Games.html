@@ -40,15 +40,56 @@
       </div>
     </nav>
   </header>
-  <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <br>
+  <div class="container">
+    <div class="card" id="search-card">
+      <div class="card-body">
+        <p class="text-center">
+          Welcome to your Game search portal! You can choose </p>
+        <p class="text-center">a Platform from the list below </p>
+        <p class="text-center">This search will give you the new releases for the selected platform. Have fun!
+        </p>
+        <form>
+          <br>
+          <br>
+          <select class="dropdown">
+            <option value="0">Select:</option>
+            <option value="9">Playstation 3</option>
+            <option value="48">Playstation 4</option>
+            <option value="12">Xbox 360</option>
+            <option value="38">Playstation Portable</option>
+            <option value="20">Nintendo DS</option>
+            <option value="41">WII U</option>
+            <option value="46">Playstation Vita</option>
+            <option value="49">Xbox One</option>
+            <option value="45">Playstation Network</option>
+            <option value="6">pc (Microsoft Windows)</option>
+            <option value="92">SteamOS</option>
+            <option value="36">Xbox Live Arcade</option>
+          </select>
+          <!-- <br>
+          <br> Release Year:
+          <br>
+          <input type="text" name="lastname" id="release-year">
+          <br>
+          <br>
+          <div>
+            <button type="button" class="button">Search</button>
+          </div> -->
+        </form>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </div>
 
+  <br>
+  <div class="container">
+    <div id="results">
+      <div class="card" id="results-card">
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
