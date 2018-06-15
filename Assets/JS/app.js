@@ -71,7 +71,7 @@
   url: gameURL, 
   method: "GET",
   headers: {
-  "user-key":"0ca0f25235d5e6e6661ebc4fa43793f3", 
+  "user-key":"312d350868fb549677d49341f1b9122a", 
   "Access-Control-Allow-Origin":"*",
   "Access-Control-Allow-Origin": "<origin>",
   "accept":"application/json",
@@ -86,10 +86,10 @@
  results.forEach(function(videoGame){
 
     var game = videoGame.game.name;
-        // $(game).each(function (i) {
-        //     $('[id="' + this.game + '"]:gt(0)').remove();
-        //     console.log(i)
-    // });
+
+    if($("#results-card:contains('Hello World')").length > 0)
+    console.log('yeah baby');
+       
     // <img src="${imgSrc}">
     
     var summary = videoGame.game.summary;
@@ -117,8 +117,8 @@
      $("#release-year").val("");
      $("select").val("0");
  
-
  });
 
 
+ 
 
