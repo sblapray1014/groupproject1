@@ -87,7 +87,7 @@
 
     var game = videoGame.game.name;
 
-    if($("#results-card:contains('Hello World')").length > 0)
+    if($("#results-card").contains(videoGame.game).length > 0)
     console.log('yeah baby');
        
     // <img src="${imgSrc}">
