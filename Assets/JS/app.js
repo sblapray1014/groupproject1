@@ -80,45 +80,86 @@
      console.log(response);
         var results = response;
 
-//  $("#search-card").hide();
-//  $("#results-card").show();
-
- results.forEach(function(videoGame){
-
-    var game = videoGame.game.name;
-
-    if($("#results-card:contains('Hello World')").length > 0)
-    console.log('yeah baby');
-       
-    // <img src="${imgSrc}">
-    
-    var summary = videoGame.game.summary;
-    var releaseDate = videoGame.game.release_dates[0].human;
-    var rating = videoGame.game.player_perspectives;
-    var imgSrc = ("src", videoGame.game.cover.url);
+        $("#search-card").hide();
+        $("#results-card").show();
         
-    var movieCard = $(`<div class="movie">
-                              <h3>${game}</h3>
-                              <p>${summary}</p>
-                              <img ${imgSrc} alt="">
-                              <p>Release Date: ${releaseDate}</p>
-                              <p> User Ratings: ${rating}</p>
-                          </div>`);
+
+        for (var i = 0; i < results.length; i++) {
+            var game = results[i].game.name;
+            $("#search-card").hide();
+            $("#results-card").show();
+            var newDiv = $("<div>");
+            newDiv.addClass("game-name");
+            var header = $("<h3>").text(game);
+            var gamePoster = $("<img>");
+            gamePoster.addClass("image-poster");
+            gamePoster.attr("src","https://www.igdb.com" + results[i].game.themes.url);
+            var thirdDiv = $("<div>");
+            thirdDiv.addClass("paragraph-height");
+            var overview = $("<p>").text(results[i].game.summary);
+            var secondDiv = $("<div>");
+            secondDiv.addClass("rating-section");
+            var ratingImage = $("<img>");
+            ratingImage.addClass("rating-image");
+            ratingImage.attr("src", "https://www.shareicon.net/download/2015/12/14/687124_empty.svg");
+            overview.addClass("overview");
+            var rDate = $("<p>").text("Release Date: " + results[i].human);
+            var vote = $("<p> User Ratings:").text(results[i].game.player_perspectives);
+            vote.addClass("user-rating");
+            secondDiv.append(vote, ratingImage);
+            thirdDiv.append(overview);
+            newDiv.append(header, gamePoster, rDate, thirdDiv, secondDiv);
+            console.log(newDiv);
+            $("#results-card").append(newDiv);
+        }
+             if (response.results == 0) {
+            $("#search-card").hide();
+            $("#results-card").show();
+            console.log("hello");
+            var errorImage = $("<img>");
+            errorImage.attr("src", "https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr08/16/1/anigif_enhanced-buzz-20359-1397626437-14.gif");
+            errorImage.css({"height":"350px", "width": "550px", "margin": "auto"});
+            $("#results-card").append(errorImage);
+            }
+             });
+             
+    
+    // $("#release-year").val("");
+    // $("select").val("0");
+  
+    
+
+//  results.forEach(function(videoGame){
+
+//     var game = videoGame.game.name;
+//     var summary = videoGame.game.summary;
+//     var releaseDate = videoGame.game.release_dates[0].human;
+//     var rating = videoGame.game.player_perspectives;
+            
+            
+//     var gameCard = $(`<div class="games">
+//                               <img src= "${imgSrc}">
+//                               <h3>${game}</h3>
+//                               <p>${summary}</p>
+//                               <p>Release Date: ${releaseDate}</p>
+//                               <p> User Ratings: ${rating}</p>
+//                           </div>`);
 
                         
-    $("#results-card").append(movieCard);
-    $("#results-card").append(imgSrc);
+//     $("#results-card").append(gameCard);
+//     // $("#results-card").append(imgSrc);
 
- })
-
- 
-  });
- 
-     $("#release-year").val("");
-     $("select").val("0");
- 
- });
-
+//  })
 
  
+//   });
+ 
+//      $("#release-year").val("");
+//      $("select").val("0");
+ 
+//  });
 
+
+ 
+
+            });
