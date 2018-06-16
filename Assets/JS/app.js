@@ -13,7 +13,7 @@ $(document).ready(function () {
             url: gameURL,
             method: "GET",
             headers: {
-                "user-key": "312d350868fb549677d49341f1b9122a",
+                "user-key": "37905d1e3217ff06e9e4078eae9dcb03",
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Origin": "<origin>",
                 "accept": "application/json",
@@ -34,8 +34,8 @@ $(document).ready(function () {
                     newDiv.addClass("game-name");
                     var header = $("<h3>").text(game);
                     var gamePoster = $("<img>");
-                    gamePoster.addClass("image-poster");
-                    gamePoster.attr("src", "https:" + results[i].game.themes.url);
+                    gamePoster.addClass("game-poster");
+                    gamePoster.attr("src", "https:" + results[i].game.cover.url);
                     var thirdDiv = $("<div>");
                     thirdDiv.addClass("paragraph-height");
                     var overview = $("<p>").text(results[i].game.summary);
