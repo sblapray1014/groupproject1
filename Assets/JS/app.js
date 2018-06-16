@@ -52,9 +52,20 @@ $(document).ready(function () {
             $("#results-card").append(imgSrc);
 
         });
+   
 
-    });
-
-  });
+// <<<<<<< jsFix
+//   });
   
-});
+// =======
+// $.ajax({ 
+//  url: gameURL, 
+//  method: "GET",
+//  headers: {
+//  "user-key":"0ca0f25235d5e6e6661ebc4fa43793f3", 
+//  "Access-Control-Allow-Origin":"*",
+//  "Access-Control-Allow-Origin": "<origin>",
+//  "accept":"application/json",
+//  }
+// >>>>>>> master
+// });
