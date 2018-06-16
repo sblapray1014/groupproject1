@@ -6,7 +6,13 @@ $("#results-card").hide();
         var year = $("#release-year").val();
         console.log(year);
 
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=8abf4717f6a2f21970e78497f3451f44&with_genres="+ genre + "&primary_release_year=" + year + "&sort_by=vote_average.desc&vote_count.gte=40";
+        if(year === "2019") {
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=8abf4717f6a2f21970e78497f3451f44&with_genres="
+        + genre + "&primary_release_year=" + year;
+        } else
+
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=8abf4717f6a2f21970e78497f3451f44&with_genres="
+        + genre + "&primary_release_year=" + year + "&sort_by=vote_average.desc&vote_count.gte=40";
 
         $.ajax({
             url: queryURL,
@@ -22,12 +28,21 @@ $("#results-card").hide();
         var newDiv = $("<div>");
         newDiv.addClass("movie");
         var header = $("<h3>").text(movie);
+        if (results[i].poster_path === null) {
         var moviePoster = $("<img>");
         moviePoster.addClass("image-poster");
+        moviePoster.attr("src", "https://www.snowshoemtnlodge.com/wp-content/uploads/2017/05/coming-soon.png");
+        } else
+        moviePoster = $("<img>");
+        moviePoster.addClass("image-poster");
         moviePoster.attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + results[i].poster_path);
+        console.log(moviePoster);
         var thirdDiv = $("<div>");
         thirdDiv.addClass("paragraph-height");
-        var overview = $("<p>").text(results[i].overview);
+        if (results[i].overview === "") {
+        var overview = $("<p>").text("Welp. This movie is too top secret to tell you anything. If we did, well, we'd have to kill you!")
+        } else 
+        overview = $("<p>").text(results[i].overview);
         var secondDiv = $("<div>");
         secondDiv.addClass("rating-section");
         var ratingImage = $("<img>");
@@ -40,7 +55,6 @@ $("#results-card").hide();
         secondDiv.append(vote, ratingImage);
         thirdDiv.append(overview);
         newDiv.append(header, moviePoster, rDate, thirdDiv, secondDiv);
-        console.log(newDiv);
         $("#results-card").append(newDiv);
     }  if (response.results.length == 0) {
         $("#search-card").hide();
