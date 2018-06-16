@@ -6,8 +6,7 @@ $("#results-card").hide();
         var year = $("#release-year").val();
         console.log(year);
 
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=8abf4717f6a2f21970e78497f3451f44&with_genres="
-            + genre + "&primary_release_year=" + year + "&sort_by=vote_average.desc&vote_count.gte=40";
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=8abf4717f6a2f21970e78497f3451f44&with_genres="+ genre + "&primary_release_year=" + year + "&sort_by=vote_average.desc&vote_count.gte=40";
 
         $.ajax({
             url: queryURL,
